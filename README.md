@@ -2,7 +2,7 @@
 
 ## Issue
 
-resource limits defined in Tekton `Task` [`{.spec.stepTemplate}`](https://tekton.dev/docs/pipelines/tasks/#specifying-a-step-template) are not applied to the related `Pod`'s `{.spec.initContainers}`.
+Resource limits and requests defined in Tekton `Task` [`{.spec.stepTemplate}`](https://tekton.dev/docs/pipelines/tasks/#specifying-a-step-template) are not applied to the related `Pod`'s `{.spec.initContainers}`.
   
 ## How-To-Reproduce
 - Install OpenShift Pipelines Operator if not present:
