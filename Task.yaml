@@ -2,8 +2,15 @@ apiVersion: tekton.dev/v1beta1
 kind: Task
 metadata:
   name: hello-world
-  namespace: namespace-one
 spec:
+  stepTemplate:
+    resources:
+      limits:
+        cpu: "2"
+        memory: 1Gi
+      requests:
+        cpu: "1"
+        memory: 1Gi
   steps:
   - name: hello-world
     image: registry.access.redhat.com/ubi8/ubi:latest
