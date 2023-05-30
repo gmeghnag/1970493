@@ -57,7 +57,7 @@ resource limits defined in Tekton `Task` [`{.spec.stepTemplate}`](https://tekton
 ## Diagnostic-Steps
 Verify that the `resources.limits` and `resources.requests` are not applied to `initContainers` (but to `containers` only):
 ```
-oc get po $(oc get taskrun hello-world-run -o jsonpath='{.status.podName}') | jq '.spec | "initContainers.resources : " +  (.initContainers[0].resources|tostring) + "\ncontainers.resources     : " + (.containers[0].resources|tostring)' -r 
+oc get po $(oc get taskrun hello-world-run -o jsonpath='{.status.podName}') -o json | jq '.spec | "initContainers.resources : " +  (.initContainers[0].resources|tostring) + "\ncontainers.resources     : " + (.containers[0].resources|tostring)' -r 
 ```
 ```
 initContainers.resources : {}
