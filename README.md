@@ -1,4 +1,4 @@
-# 1970493
+# SRVKP-3140
 
 ## Issue
 
@@ -12,7 +12,7 @@ Resource limits and requests defined in Tekton `Task` [`{.spec.stepTemplate}`](h
   
 - Initiate the `Task` and `TaskRun` resources to reproduce the issue:
   ```
-  oc apply -k https://github.com/gmeghnag/1970493
+  oc apply -k https://github.com/gmeghnag/SRVKP-3140
   ```
   <details close>
   <summary><code>Task</code> definition</summary>
